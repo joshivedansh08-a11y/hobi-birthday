@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday HOBI 💜</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #4b0082, #8a2be2, #c77dff);
+        color: white;
+        text-align: center;
+        overflow: hidden;
+        height: 100vh;
+      }
+
+      .page {
+        display: none;
+        padding: 30px;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .active {
+        display: flex;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 25px;
+        border-radius: 20px;
+        max-width: 800px;
+      }
+
+      h1,
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      p {
+        line-height: 1.8;
+        margin: 10px 0;
+      }
+
+      button {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        margin: 10px;
+      }
+
+      input {
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        margin: 10px;
+        text-align: center;
+      }
+
+      .heart {
+        font-size: 60px;
+        animation: beat 1s infinite;
+      }
+
+      @keyframes beat {
+        50% {
+          transform: scale(1.2);
+        }
+      }
+
+      .confetti {
+        position: fixed;
+        top: -10px;
+        font-size: 24px;
+        animation: fall linear infinite;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(110vh);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- PAGE 1 -->
+    <div class="page active" id="page1">
+      <div class="card">
+        <h2>🔒 Password Required</h2>
+
+        <input type="password" id="password" placeholder="Enter Password" />
+
+        <br />
+
+        <button onclick="unlock()">Unlock 🎁</button>
+
+        <p id="error"></p>
+
+        <p style="margin-top: 20px">Made by Vedansh Joshi and GPT 💜</p>
+      </div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="page" id="page2">
+      <div class="card">
+        <h1>🎉 Happy Birthday HOBI 🎉</h1>
+
+        <p>
+          It hasn't even been a year since we became friends, but somehow we
+          became best friends so quickly.(line cross krke)
+        </p>
+
+        <p>
+          Thank you for all the conversations, the laughs, the random moments,
+          and for being such an important part of my life.(han abhi ke time pr
+          tu hi ek bestfreindd h bssssssss tuututu)
+        </p>
+
+        <p>
+          I hope this birthday brings you happiness, success and countless
+          beautiful memories. 💜(18th birthday)(ab tu senior citizen hogyi h)
+        </p>
+
+        <button onclick="nextPage(3)">Next ➜</button>
+
+        
+      </div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="page" id="page3">
+      <div class="card">
+        <h1>🍜 Important Birthday Message 🍜</h1>
+
+        <p style="font-size: 28px">HOBI,</p>
+
+        <p style="font-size: 24px">
+          MOMOOSOSOSOSS KHILALLALAL DEEEE ABBB TOHHH 😭🍜
+        </p>
+
+        <p>This is the most important return gift I am expecting 😂💜</p>
+
+        <button onclick="nextPage(2)">⬅ Back</button>
+        <button onclick="nextPage(4)">Next ➜</button>
+
+       
+      </div>
+    </div>
+
+    <!-- PAGE 4 -->
+    <div class="page" id="page4">
+      <div class="card">
+        <h1>🎵 Music & Fandom Corner 🎵</h1>
+
+        <a
+          href="https://youtu.be/QWDayFgPDjQ?si=FahNA6iWiZPqWeC6"
+          target="_blank"
+        >
+          <button>🎶 Play Arirang</button>
+        </a>
+
+        <p>HOBI,</p>
+
+        <p>
+          I remember your favorite Stray Kids member is
+          <b>Bang Chan</b> 🐺💜
+        </p>
+
+        <p>
+        dekh website banane mein mehnat lagi h momos toh khila skti 
+          h baki gpt bhai ki bhi madad li h banane mein baki korea jb jygi
+          mujhe bhi leke jyio mene ye website 10 june ko bana
+          li h ab dekhte h mein kese sabr rakhunga jldiii 17th 
+          august aye baki happppppppyyyyy birthdayyyyyyyyyyyyyyyyyyyyyy hobi 
+          
+        </p>
+
+        
+         
+        </p>
+
+        <p>❤️ Happy Birthday HOBI ❤️</p>
+
+        <button onclick="nextPage(3)">⬅ Back</button>
+        <button onclick="nextPage(5)">Next ➜</button>
+
+        
+      </div>
+    </div>
+
+    <!-- PAGE 5 -->
+    <div class="page" id="page5">
+      <div class="card">
+        <div class="heart">💜</div>
+
+        <h1>🎁 Final Surprise 🎁</h1>
+
+        <p>
+          <b>Once Vedansh Joshi said:</b>
+        </p>
+
+        <p>
+          "True friendship isn't measured by years, it's measured by trust,
+          memories, and the comfort of knowing that someone will always be there
+          for you."
+        </p>
+
+        <p>Thank you for being such an amazing friend.</p>
+
+        <p>
+          No matter where life takes us, I hope we always stay best friends.
+        </p>
+
+        <p>
+          Keep smiling.<br />
+          Keep shining.<br />
+          Keep being yourself.
+        </p>
+
+        <h2>❤️ Happy Birthday HOBI ❤️</h2>
+
+        <p>Made by Vedansh Joshi and GPT 💜</p>
+
+        <button onclick="nextPage(4)">⬅ Back</button>
+      </div>
+    </div>
+
+    <script>
+      function unlock() {
+        let pass = document.getElementById("password").value;
+
+        if (pass === "bangchan") {
+          document.getElementById("page1").classList.remove("active");
+          document.getElementById("page2").classList.add("active");
+
+          createConfetti();
+        } else {
+          document.getElementById("error").innerHTML = "Wrong Password ❌";
+        }
+      }
+
+      function nextPage(page) {
+        document.querySelectorAll(".page").forEach((p) => {
+          p.classList.remove("active");
+        });
+
+        document.getElementById("page" + page).classList.add("active");
+      }
+
+      function createConfetti() {
+        for (let i = 0; i < 50; i++) {
+          let c = document.createElement("div");
+
+          c.className = "confetti";
+
+          c.innerHTML = ["💜", "🎉", "✨", "🎂", "❤️"][
+            Math.floor(Math.random() * 5)
+          ];
+
+          c.style.left = Math.random() * 100 + "vw";
+
+          c.style.animationDuration = 3 + Math.random() * 4 + "s";
+
+          document.body.appendChild(c);
+        }
+      }
+    </script>
+  </body>
+</html>
+Attachments area
